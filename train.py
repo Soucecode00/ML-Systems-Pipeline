@@ -22,4 +22,14 @@ X_train,X_test, y_train, y_test = train_test_split(x,y, test_size= 0.2, random_s
 from sklearn.linear_model import LogisticRegression 
 model = LogisticRegression()
 model.fit(X_train, y_train)
-print('model trained successfully')
+y_pred = model.predict(X_test)
+# print('predictions', y_pred)
+# print('Actual Values', y_test.values)
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+print('Accuracy:', accuracy_score(y_test, y_pred))
+print('\nConfusion Matrix:', confusion_matrix(y_test, y_pred))
+print('\n classification report', classification_report(y_test, y_pred))
+
+import joblib 
+joblib.dump(model, 'model.pkl')
+print('model saved successfully')

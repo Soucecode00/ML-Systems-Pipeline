@@ -26,9 +26,9 @@ y_pred = model.predict(X_test)
 # print('predictions', y_pred)
 # print('Actual Values', y_test.values)
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
-print('Accuracy:', accuracy_score(y_test, y_pred))
-print('\nConfusion Matrix:', confusion_matrix(y_test, y_pred))
-print('\n classification report', classification_report(y_test, y_pred))
+# print('Accuracy:', accuracy_score(y_test, y_pred))
+# print('\nConfusion Matrix:', confusion_matrix(y_test, y_pred))
+# print('\n classification report', classification_report(y_test, y_pred))
 
 import joblib 
 joblib.dump(model, 'model.pkl')

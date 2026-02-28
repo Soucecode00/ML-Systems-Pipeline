@@ -1,0 +1,17 @@
+{
+  "data_source": {
+    "raw_data_path": "data/raw/loan_data.csv",
+    "processed_data_path": "data/processed/loan_data_processed.csv"
+  },
+  "preprocessing": {
+    "handle_missing": "drop",
+    "scaling_method": "standard",
+    "outlier_removal": false
+  },
+  "validation": {
+    "required_columns": ["age", "income", "savings", "approved"],
+    "age_range": [18, 100],
+    "income_range": [0, 1000000],
+    "savings_range": [0, 1000000]
+  }
+}

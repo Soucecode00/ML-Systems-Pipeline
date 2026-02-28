@@ -1,0 +1,21 @@
+{
+  "model": {
+    "name": "LogisticRegression",
+    "random_state": 42,
+    "max_iter": 1000,
+    "solver": "lbfgs",
+    "class_weight": "balanced"
+  },
+  "data_split": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "stratify": true
+  },
+  "features": {
+    "input_features": ["age", "income", "savings"],
+    "target_feature": "approved"
+  },
+  "model_path": "models/loan_prediction_model.pkl",
+  "scaler_path": "models/scaler.pkl",
+  "metrics_path": "models/metrics.json"
+}
